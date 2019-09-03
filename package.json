@@ -1,0 +1,25 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "An awesome burger restaurant that lets you request and devour burgers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rainbojack1/Eat-Da-Burger.git"
+  },
+  "author": "Jesselyn Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rainbojack1/Eat-Da-Burger/issues"
+  },
+  "homepage": "https://github.com/rainbojack1/Eat-Da-Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
