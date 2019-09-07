@@ -23,11 +23,14 @@
 
         <ul>
             {{#each burgers}}
-            <li>
-                    <p><span class="label">ID:</span> {{this.id}}</p>
-                    <p><span class="label">Name:</span> {{this.burger_name}}</p>
-                    <button type="submit" id="devour">Devour It</button>
-            </li>
+                {{!-- if not --}}
+                {{#unless devoured}}
+                    <li>
+                            <p><span class="label">#:</span> {{this.id}}
+                            <span class="label"> Name:</span> {{this.burger_name}}
+                            <button type="submit" class="devour" data-id="{{this.id}}">Devour It</button></p>
+                    </li>
+                    {{/unless}}
             {{/each}}
         </ul>
     </div>
@@ -35,7 +38,16 @@
     <div class="col-md-6">
         <h3>Burgers you've eaten:</h3>
         <ul>
-            <!--list of eaten burgers-->
+            {{#each burgers}}
+                {{!-- if --}}
+                {{#if devoured}}
+                    <li>
+                            <p><span class="label">#:</span> {{this.id}}
+                            <span class="label"> Name:</span> {{this.burger_name}}
+                            <button type="submit" class="devour" data-id="{{this.id}}">Devour It</button></p>
+                    </li>
+                {{/if}}
+            {{/each}}
         </ul>
     </div>
 </div>

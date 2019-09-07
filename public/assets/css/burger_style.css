@@ -15,3 +15,7 @@ body {
 .inl-blk {
     display: inline-block;
 }
+
+ul {
+    list-style-type: none;
+}

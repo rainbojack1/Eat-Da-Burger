@@ -1,5 +1,5 @@
 $(function() {
-    
+    //Add a new burger
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
     
@@ -20,4 +20,25 @@ $(function() {
           }
         );
       });
+      //Devour a burger
+      $(".devour").on("click", function(event) {
+        var id = $(this).data("id");
+        
+        var eaten = {
+            devoured: true
+        };
+    
+        console.log("ID = " + id);
+        // Send the PUT request.
+        $.ajax("/api/burgers/" + id, {
+          type: "PUT",
+          data: eaten
+        }).then(
+          function() {
+            console.log("changed burger #" + id + " devoured to true");
+            // Reload the page to get the updated list
+            location.reload();
+          }
+        );
+      })
 });
