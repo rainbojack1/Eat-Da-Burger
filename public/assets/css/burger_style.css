@@ -1,0 +1,17 @@
+body {
+    background-image: url("../img/food.png");
+}
+
+#burgerImg img {
+    width: 25%;
+    padding: 10px;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inl-blk {
+    display: inline-block;
+}

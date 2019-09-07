@@ -1,10 +1,42 @@
-<h1>Eat da Burger!</h1>
+<header class="center">
+    <h1>Eat da Burger!</h1>
+</header>
+<div class="center" id="burgerImg">
+    <img src="/assets/img/kissclipart-burger-cartoon-png.png">
+</div>
+<div class="row center my-2">
+    <div class="col">
+        <form class="create-form">
+            <div class="center">
+            <div class="form-group inl-blk">
+                <label for="burger-label" class="inl-blk">Burger Name: </label>
+                <input type="text" id="burger-label" name="name" class="ml-2">
+            </div>
+            <button type="submit" id="add" class="ml-2 inl-blk">Add It</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">      
+        <h3>Here is a list of the burgers we have:</h3>
 
-<ul>
-  {{#each burgers}}
-  <li>
-  	    <p><span class="label">ID:</span> {{this.id}}</p>
-        <p><span class="label">Name:</span> {{this.burger_name}}</p>
-  </li>
-  {{/each}}
-</ul>
+        <ul>
+            {{#each burgers}}
+            <li>
+                    <p><span class="label">ID:</span> {{this.id}}</p>
+                    <p><span class="label">Name:</span> {{this.burger_name}}</p>
+                    <button type="submit" id="devour">Devour It</button>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Burgers you've eaten:</h3>
+        <ul>
+            <!--list of eaten burgers-->
+        </ul>
+    </div>
+</div>
+
